@@ -1,0 +1,168 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+button {
+	font-family: 'Helvetica', sans-serif;
+}
+
+header {
+	justify-content: space-evenly;
+	display: flex;
+	width: 90%;
+	height: 10vh;
+	align-items: center;
+}
+
+.logo-container,
+.nav-links{
+	display: flex;
+}
+
+.logo-container {
+	flex: 1;
+}
+
+.logo {
+	font-weight: 600;
+	font-size: 23px;
+	margin: 5px;
+}
+
+nav {
+	flex: 2;
+}
+
+.nav-links {
+	justify-content: space-around;
+	list-style: none;	
+}
+
+.nav-link {
+	color: #6d6767;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+.nav-link:hover{
+	color:black;
+}
+
+.presentation {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	min-height: 90vh;
+	align-items: center;
+}
+
+.introduction {
+	flex: 1;
+}
+
+.intro-text h1 {
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #11dd34, #e56431);
+}
+
+.intro-text p {
+	margin-top: 5px;
+	font-size: 22px;
+	color: #2c1e0e;
+}
+
+.cta {
+	padding: 50px 0px 0px 0px;
+	
+}
+
+.cta-select {
+	border: 2px solid rgb(170, 2, 2);
+	background: transparent;
+	color: #0ea9d4;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.but{
+	text-decoration: none;
+	color: rgb(18, 20, 44);
+}
+
+.but:hover{
+	color: royalblue;
+}
+
+.cover {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	height: 60vh; 
+}
+
+.cover img {
+	height: 100%;
+	filter: drop-shadow(0px 10px 6px rgb(18, 20, 44));
+	animation: drop 1.5s ease;
+}
+
+.big-circle {
+	position: absolute;
+	top: 5vh;
+	left: 1vw;
+	z-index: -1;
+	opacity: 0.1;
+	height: 90%;
+}
+
+@keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.presentation {
+		flex-direction: column;
+	}
+
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+
+	.intro-text h1 {
+		font-size: 30px;
+	}
+
+	.intro-text p {
+		font-size: 18px;
+	}
+
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	
+	.cover img {
+		height: 80%;
+	}
+	
+	.big-circle {
+		opacity: 0.1;
+	}
+} 
